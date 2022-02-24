@@ -13,12 +13,16 @@ textarea:focus::-webkit-scrollbar-thumb {
 </style>
 <template>
   <div
-    class="card p-4 w-full max-w-[300px] h-[300px] flex flex-col"
+    class="card p-4 w-full max-w-[300px] h-[150px] sm:h-[300px] flex flex-col"
     :style="this.getBg()"
   >
-    <h2 class="text-2xl uppercase font-extrabold text-white">{{ title }}</h2>
+    <h2 class="text-lg sm:text-2xl uppercase font-extrabold text-white">
+      {{ title }}
+    </h2>
     <div class="mt-3 flex-grow flex flex-col">
-      <label class="text-gray-800" :for="this.label">{{ label }}</label>
+      <label class="hidden sm:block text-gray-800" :for="this.label">{{
+        label
+      }}</label>
       <textarea
         :id="this.label"
         class="outline-none text-black-500 w-full mt-2 bg-transparent border-2 border-slate-300 resize-none focus:border-white flex-grow p-1 text-gray-900"

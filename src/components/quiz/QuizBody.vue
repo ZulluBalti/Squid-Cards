@@ -32,7 +32,7 @@
     class="quizBody flex flex-col items-center gap-6 md:flex-row md:justify-between"
   >
     <div
-      class="relative qCard w-[300px] h-[300px]"
+      class="relative qCard w-[300px] h-[150px] sm:h-[300px]"
       :class="this.question.attempted ? 'flip' : ''"
     >
       <Card
@@ -55,8 +55,8 @@
       />
     </div>
     <Card
-      primaryColor="#5bd599"
-      secondaryColor="#88dbb2"
+      primaryColor="#5b97da"
+      secondaryColor="#69a0dd"
       title="Meaning"
       label="Type your answer"
       :text="userAnswer"
@@ -122,6 +122,8 @@ export default {
       ) {
         this.result = "You are awesome";
         this.question.wasRight = true;
+
+        this.$emit("nxtQuestion");
       } else {
         this.result = "Try Hard";
         this.question.skipOrWrong = "wrong";
