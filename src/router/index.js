@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPageVue from "../views/LandingPage.vue";
+import TnC from "../views/TermNconditions.vue";
 import SignUpVue from "../views/SignUp.vue";
 import Dashboard from "../views/Dashboard.vue";
 import MakeACard from "../views/MakeACard.vue";
@@ -12,6 +13,11 @@ const router = createRouter({
       path: "/",
       name: "LandingPage",
       component: LandingPageVue,
+    },
+    {
+      path: "/terms-and-conditions",
+      name: "TnC",
+      component: TnC,
     },
     {
       path: "/signup",
