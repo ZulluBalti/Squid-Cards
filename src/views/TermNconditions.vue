@@ -123,6 +123,9 @@ h2 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+p {
+  margin: 1.2rem 0;
+}
 </style>
 
 <script>

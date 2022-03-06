@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPageVue from "../views/LandingPage.vue";
 import TnC from "../views/TermNconditions.vue";
+import privacyPolicy from "../views/Privacy-Policy.vue";
 import SignUpVue from "../views/SignUp.vue";
 import Dashboard from "../views/Dashboard.vue";
 import MakeACard from "../views/MakeACard.vue";
@@ -18,6 +19,11 @@ const router = createRouter({
       path: "/terms-and-conditions",
       name: "TnC",
       component: TnC,
+    },
+    {
+      path: "/privacy-policy",
+      name: "PrivacyPolicy",
+      component: privacyPolicy,
     },
     {
       path: "/signup",
